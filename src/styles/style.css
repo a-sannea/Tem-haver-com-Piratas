@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation&display=swap');
+
+:root {
+    --almost-white: #f5f4f5;
+    --could-be-black: #201e1e;
+    --its-a-yellow: #E3C31D;
+    --this-is-red: #A52727;
+}
+
+body {
+    font-family: "Edu NSW ACT Foundation", cursive;
+    background: url(/src/assets/cover-blur.png) no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding-top: 4rem;
+}
+
+.head .titles {
+    text-align: center;
+}
+
+.titles h2 {
+    font-size: 22px;
+    color: var(--almost-white);
+}
+
+.titles h5 {
+    font-size: 18px;
+    color:var(--its-a-yellow);
+}
+
+.head .flag {
+    width: 50px;
+    height: 50px;
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20rem;
+}
+
+.list-cards {
+    width: 310px;
+    height: 500px;
+    margin: 2rem 0 0 0;
+    position: relative;
+}
+
+.card {
+    opacity: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #201e1e63;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    transition: opacity 300ms ease-in-out;
+}
+
+.card.selected {
+    opacity: 1;
+    z-index: 1;
+}
+
+.arrows {
+    background-color: var(--could-be-black);
+    width: 45px;
+    height: 45px;
+    border-radius: 50px;
+    border: 0;
+    cursor: pointer;
+    transition: background-color 500ms ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.arrows.prev {
+    transform: rotateY(180deg);
+}
+
+.arrows:hover {
+    background-color: var(--its-a-yellow);
+
+}
+
+.card .bounty {
+    background: #b3b1b93d;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 100%;
+}
+
+.card .bounty .name {
+    color: var(--its-a-yellow);
+    font-size: 20px;
+}
+
+.card .crew-image {
+    text-align: center;
+}
+
+.card .description {
+    background: rgba(179, 177, 185, 0.24);
+    border-radius: 10px;
+    height: 175px;
+}
+
+.card .description h4 {
+    background-color: var(--its-a-yellow);
+    color: var(--this-is-red);
+    font-size: 20px;
+    padding: 3px;
+    text-align: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card .about {
+    padding: 8px;
+    text-align: justify;
+    max-height: 135px;
+    overflow-y: auto;
+    font-size: 16px;
+}
+
+::-webkit-scrollbar {
+    width: 2.5px;
+}
+::-webkit-scrollbar-track {
+    background: var(--could-be-black);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--this-is-red);
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--its-a-yellow);
+}
