@@ -151,3 +151,10 @@ body {
 ::-webkit-scrollbar-thumb:hover {
     background-color: var(--its-a-yellow);
 }
+
+.copy {
+    text-align: right;
+    margin-top: -1rem;
+    margin-right: 2rem;
+    font-size: 18px;
+}
